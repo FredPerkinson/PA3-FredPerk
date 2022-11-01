@@ -1,0 +1,15 @@
+C:\Users\perki\Desktop\MIS 321\movieproject\bin\Debug\net6.0\movieproject.exe
+C:\Users\perki\Desktop\MIS 321\movieproject\bin\Debug\net6.0\movieproject.deps.json
+C:\Users\perki\Desktop\MIS 321\movieproject\bin\Debug\net6.0\movieproject.runtimeconfig.json
+C:\Users\perki\Desktop\MIS 321\movieproject\bin\Debug\net6.0\movieproject.dll
+C:\Users\perki\Desktop\MIS 321\movieproject\bin\Debug\net6.0\movieproject.pdb
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\movieproject.csproj.AssemblyReference.cache
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\movieproject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\movieproject.AssemblyInfoInputs.cache
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\movieproject.AssemblyInfo.cs
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\movieproject.csproj.CoreCompileInputs.cache
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\movieproject.dll
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\refint\movieproject.dll
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\movieproject.pdb
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\movieproject.genruntimeconfig.cache
+C:\Users\perki\Desktop\MIS 321\movieproject\obj\Debug\net6.0\ref\movieproject.dll

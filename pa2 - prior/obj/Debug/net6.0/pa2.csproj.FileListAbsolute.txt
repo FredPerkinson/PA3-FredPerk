@@ -1,0 +1,15 @@
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\pa2.csproj.AssemblyReference.cache
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\pa2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\pa2.AssemblyInfoInputs.cache
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\pa2.AssemblyInfo.cs
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\pa2.csproj.CoreCompileInputs.cache
+C:\Users\perki\Desktop\MIS 321\pa2\bin\Debug\net6.0\pa2.exe
+C:\Users\perki\Desktop\MIS 321\pa2\bin\Debug\net6.0\pa2.deps.json
+C:\Users\perki\Desktop\MIS 321\pa2\bin\Debug\net6.0\pa2.runtimeconfig.json
+C:\Users\perki\Desktop\MIS 321\pa2\bin\Debug\net6.0\pa2.dll
+C:\Users\perki\Desktop\MIS 321\pa2\bin\Debug\net6.0\pa2.pdb
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\pa2.dll
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\refint\pa2.dll
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\pa2.pdb
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\pa2.genruntimeconfig.cache
+C:\Users\perki\Desktop\MIS 321\pa2\obj\Debug\net6.0\ref\pa2.dll

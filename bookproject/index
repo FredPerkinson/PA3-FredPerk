@@ -1,0 +1,8 @@
+namespace ooppractice
+
+public class mammals
+{
+    public string Name {get; set;}
+
+    public string 
+}

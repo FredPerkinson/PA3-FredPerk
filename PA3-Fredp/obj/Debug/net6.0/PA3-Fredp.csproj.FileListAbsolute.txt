@@ -1,0 +1,7 @@
+C:\Users\perki\Desktop\MIS 321\PA3-Fredp\obj\Debug\net6.0\PA3-Fredp.csproj.AssemblyReference.cache
+C:\Users\perki\Desktop\MIS 321\PA3-Fredp\obj\Debug\net6.0\PA3-Fredp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\perki\Desktop\MIS 321\PA3-Fredp\obj\Debug\net6.0\PA3-Fredp.AssemblyInfoInputs.cache
+C:\Users\perki\Desktop\MIS 321\PA3-Fredp\obj\Debug\net6.0\PA3-Fredp.AssemblyInfo.cs
+C:\Users\perki\Desktop\MIS 321\PA3-Fredp\obj\Debug\net6.0\PA3-Fredp.csproj.CoreCompileInputs.cache
+C:\Users\perki\Desktop\MIS 321\PA3-Fredp\obj\Debug\net6.0\PA3-Fredp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\perki\Desktop\MIS 321\PA3-Fredp\obj\Debug\net6.0\PA3-Fredp.MvcApplicationPartsAssemblyInfo.cache

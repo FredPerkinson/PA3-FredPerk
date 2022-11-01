@@ -1,0 +1,5 @@
+using bookproject;
+Movie myMovie new Movie({ID=1, Title = "The Dark Knight", LengthInMinutes=120});
+myMovie.MovieDirector = new Director() {ID=1, FirstName= "Christopher", LastName="Nolan"};
+
+System.Console.WriteLine($"My movie titel is {myMovie.Title}", " and it was directed by "{myMovie.FirstName} " " {myMovie.Lastname})
