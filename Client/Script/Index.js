@@ -24,7 +24,7 @@ let drivers = JSON.parse(localStorage.getItem('myDrivers')) ? JSON.parse(localSt
 // console.log(jsonDrivers)
 
 function getDriver(){
-    const driverApiUrl = "";//////where to put url for website but i think it comes from workbench mySQL
+    const driverApiUrl = "https://dashboard.heroku.com/apps/pa3-fredp/api/drivers";
 
     fetch(driverApiUrl).then(function(response){
         console.log(response);
@@ -33,11 +33,13 @@ function getDriver(){
         let html = `<table style =\"width:100%\">`
         html += "<tr><th>id</th><th>name</th><th>rating</th><th>dateHired</th><th>deleted</th></tr>"
         json.forEach((driver)=>{
-            html += `<tr key =${driver.id}> <td>" +driver.name + "</td><td>" +driver.rating + "</td><td>" + driver.dateHired + "</td><td>" + driver.deleted + "</td>" + "<td> <button onClick = \"removeDriver("+driver.id+")\">Delete<\button></td>/tr>`; ////////////
+            html += "<tr key = " + driver.id + "> <td> " + driver.name + "</td><td>" +driver.rating + "</td><td>" + driver.dateHired + "</td><td>" + driver.deleted + "</td>" + "<td> <button onClick = \"showModal("driver.id",\'") ///////////do this with $(driver.id)
+            
+            removeDriver("+driver.id+")\">Delete<\button></td>/tr>;
         });
         html += "</table>";
         document.getElementById("drivers").innerHTML = html;
-    }).catch(fucntion(error){
+    }).catch(function(error){
         console.log(error);
     });
 }

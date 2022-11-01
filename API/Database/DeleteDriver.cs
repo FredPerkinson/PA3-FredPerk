@@ -7,43 +7,61 @@ namespace API.Database
 {
     public class DeleteDriver
     {
-        public void deleteDriver(Driver myDriver)
+        public void RemoveDriver(Driver myDriver)
         {
-            ConnectionString myConnection = new ConnectionString();
-            string cs = myConnection.cs;
-            using var con = new MySqlConnection(cs);
-            con.Open();
+            DBConnect db = new DBConnect();
+            bool isOpen = db.OpenConnection();
 
-            string stm = @" drivers(id, firstName, rating, dateHired, deleted) VALUES(@id, @firstName, @rating, @dateHired, @deleted)";
+            if(isOpen){
+                MySqlConnection conn = db.GetConn();
+                MySqlCommand cmd = new MySqlCommand();
+
+                cmd.Connection = conn;
+
+                cmd.CommandText = @"DELETE FROM drivers WHERE id=@id";
+                cmd.Parameters.AddWithValue("@id",id);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
 
 
-////////////sql update statements
-            using var cmd = new MySqlCommand(stm, con);
 
-            cmd.Parameters.AddWithValue("@id", myDriver.id);
-            cmd.Parameters.AddWithValue("@firstName", myDriver.firstName);
-            cmd.Parameters.AddWithValue("@rating", myDriver.rating);
-            cmd.Parameters.AddWithValue("@dateHired", myDriver.dateHired);
-            cmd.Parameters.AddWithValue("@deleted", myDriver.deleted);
 
-            cmd.Prepare();
+//             ConnectionString myConnection = new ConnectionString();
+//             string cs = myConnection.cs;
+//             using var con = new MySqlConnection(cs);
+//             con.Open();
 
-            cmd.ExecuteNonQuery();
-        }
+//             string stm = @" drivers(id, firstName, rating, dateHired, deleted) VALUES(@id, @firstName, @rating, @dateHired, @deleted)";
 
-        public static void DropDriverTable()
-        {
-        ConnectionString myConnection = new ConnectionString();
-        string cs = myConnection.cs;
 
-        using var con = new MySqlConnection(cs);
-        con.Open();
+// ////////////sql update statements
+//             using var cmd = new MySqlCommand(stm, con);
 
-        string stm = @"DROP TABLE IF EXISTS drivers";
+//             cmd.Parameters.AddWithValue("@id", myDriver.id);
+//             cmd.Parameters.AddWithValue("@firstName", myDriver.firstName);
+//             cmd.Parameters.AddWithValue("@rating", myDriver.rating);
+//             cmd.Parameters.AddWithValue("@dateHired", myDriver.dateHired);
+//             cmd.Parameters.AddWithValue("@deleted", myDriver.deleted);
 
-        using var cmd = new MySqlCommand(stm, con);
+//             cmd.Prepare();
 
-        cmd.ExecuteNonQuery();
+//             cmd.ExecuteNonQuery();
+//         }
+
+//         public static void DropDriverTable()
+//         {
+//         ConnectionString myConnection = new ConnectionString();
+//         string cs = myConnection.cs;
+
+//         using var con = new MySqlConnection(cs);
+//         con.Open();
+
+//         string stm = @"DROP TABLE IF EXISTS drivers";
+
+//         using var cmd = new MySqlCommand(stm, con);
+
+//         cmd.ExecuteNonQuery();
         }
     }
 }
