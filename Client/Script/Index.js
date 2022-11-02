@@ -3,7 +3,8 @@
 
 //need to figure out how to call the api
 //need to fix using statements for MySql
-//github is not pushing anymore
+//how to add rating and name do i need multiple buttons?
+
 
 
 let app = document.getElementById("app")
@@ -26,8 +27,6 @@ function createDriverTable(){
         console.log(json)
         displayDriverTable(json)
     })
-
-
 }
 
 function displayDriverTable(driverData){

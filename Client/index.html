@@ -11,6 +11,39 @@
 <body onload = handleOnLoad()>
     <div id = "app"></div>
 
+    <div id = "Drivers" class = "container row">
+        <div class = "row">
+        </div>
+    </div>
+
+    <div id = "add" class = "container">
+        <form onsubmit="return false;" method=" post">
+        <label class = "form-label" for = "firstName"> Add a Driver:</label><br>
+        <input class = "form-control" type = "text" id = "firstName" name = "firstName"><br>
+        <button class = btn onclick = "addDriver()"> Add Driver</button>
+        </form>
+    </div>
+
+    <div id="edit" class = "container">
+        <form onsubmit="return flase;">
+            <label class = "form-label" for = "editDriver">Edit Driver here:</label><br>
+            <input class = "form-control" type = "text" id = "editDriver" name = "editDriver"><br>
+            <button class = "btn" onclick= "editDriver()">Edit Driver</button>
+        </form>
+    </div>
+
+    <div id = "delete" class = "container">
+        <form onsubmit="return false">
+            <label class = "form-label" for = "deleteDriver">Delete a Driver:</label><br>
+            <input class = "form-control" type = "text" id = "deleteDriver" name = "deleteDriver"><br>
+            <button class = "btn" onclick = "deleteDriver()">Delete a Driver</button>
+        </form>
+    </div>
+
+    <div class = "container">
+        <div id = "searchDriver" class = "row">
+        </div>
+    </div>
     <script type = "text/javascript" src = "./Script/index.js"></script>
 </body>
 </html>

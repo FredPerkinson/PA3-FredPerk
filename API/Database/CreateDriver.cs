@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using API.Models;
 using System.Data;
 using MySql.Data;
-using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;  
 
 namespace API.Database
 {
