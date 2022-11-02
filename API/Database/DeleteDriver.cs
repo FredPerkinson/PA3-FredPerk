@@ -2,11 +2,48 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Models;
+using System.Data;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
+///////////add mysql using statements
 
 namespace API.Database
 {
     public class DeleteDriver
     {
+        public static void DeleteDriverTable(){
+            ConnectionString connectionString = new ConnectionString();
+            string cs = connectionString.cs;
+            using var con = new MySqlConnection(cs);
+            con.Open();
+
+            string stm = @"DROP TABLE IF EXISTS drivers";
+            using var cmd = new MySqlCommand(stm, con);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void DeleteDriver(int id){
+            ConnectionString connectionString = new ConnectionString();
+            string cs = connectionString.cs;
+            using var con = new MySqlConnection(cs);
+            con.Open();
+            Boolean deleted = true;
+
+            string stm = @"UPDATE drivers SET delted = @delted WHERE id = @id";
+
+            using var cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@deleted", deleted);
+            cmd.Prepare();
+
+            string temp = @"SELECT * FROM ORDER BY dateHired DESC";
+            using var temp = new MySqlCommand(temp, con);
+            cmd.ExecuteNonQuery();
+        }
+
         public void RemoveDriver(Driver myDriver)
         {
             DBConnect db = new DBConnect();

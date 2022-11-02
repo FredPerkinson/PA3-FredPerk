@@ -15,7 +15,8 @@ namespace api.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            ReadDriver readObject = new ReadDriver();/////////////////
+            return readObject.readDriver(); /////////////////////////
         }
 
         // GET: api/Driver/5
@@ -29,19 +30,23 @@ namespace api.Controllers
         [HttpPost]
         public void Post([FromBody]Driver driver)
         {
-
+            CreateDriver myDriver = new CreateDriver();
+            myDriver.Create(driver);
         }
 
         // PUT: api/Driver/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+
         }
 
         // DELETE: api/Driver/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            DeleteDriver myDriver = new DeleteDriver();
+            myDriver.Delete(id);
         }
     }
 }

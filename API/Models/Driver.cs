@@ -13,7 +13,7 @@ namespace API.Models
 
         public double rating {get; set;}
 
-        public string? dateHired  { get; set; }
+        public DateTime dateHired  { get; set; }
 
         public Boolean deleted {get; set;}
     }

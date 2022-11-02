@@ -3,11 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Models;
+using System.Data;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace API.Database
 {
     public class ReadDriver
     {
+        public Driver ViewDriver(int id){
+            ConnectionString connectionString = new ConnectionString();
+            Driver driver = new Driver();
+            string cs = connectionString.cs;
+            using var con = new MySqlConnection(cs);
+            con.Open();
+            return driver;
+        }
+
+        // public List<drivers> ViewDrivers(){
+        //     ConnectionString connectionString = new ConnectionString();
+        //     string cs = connectionString.cs;
+        //     using var con = new MySqlConnection(cs);
+        //     con.Open();
+
+        //     string stm = @"SELECT * FROM drivers ORDER BY dateHired DESC";
+
+        //     using var cmd = new MySqlCommand(stm, con);
+        //     using MySqlDataReader reader = cmd.ExecuteNonQuery();
+
+        //     while(reader.Rea)
+        // }
         public void readDriver(Driver myDriver)
         {
             ConnectionString myConnection = new ConnectionString();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xEUSqV0yspAXELS516tlQhJlw/0Q5b+mKdYEj6rhj8CVATXNTrcpllVyx9dR3MAuBDk4detVZfaLniyabiZhug==",
+  "dgSpecHash": "s84l6iOr1h1NY+Pf4CxF9sAw6uveeQFHzKcwcrfLSgJnRakNyhG5dTKGHYCb/f+apevG0RBZrPrmHRWQU/RXlw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\API\\api.csproj",
+  "projectFilePath": "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\api\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\perki\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\perki\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",

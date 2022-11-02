@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\API\\api.csproj": {}
+    "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\API\\api.csproj": {
+    "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\API\\api.csproj",
+        "projectUniqueName": "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\API\\api.csproj",
+        "projectPath": "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\api\\api.csproj",
         "packagesPath": "C:\\Users\\perki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\API\\obj\\",
+        "outputPath": "C:\\Users\\perki\\Desktop\\MIS 321\\PA3-FredPerk\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\perki\\AppData\\Roaming\\NuGet\\NuGet.Config"

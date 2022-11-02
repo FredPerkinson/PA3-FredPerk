@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Models;
+using System.Data;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace API.Database
 {
     public class EditDriver
     {
-        public void createDriver(Driver myDriver)
+        public void UpdateDriver(Driver drivers)
         {
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
@@ -27,6 +30,8 @@ namespace API.Database
 
             cmd.Prepare();
 
+            string temp = @"SELECT * FROM drivers ORDER BY dateHired DESC";
+            using var temp = new MySqlCommand(temp, con);
             cmd.ExecuteNonQuery();
         }
     }

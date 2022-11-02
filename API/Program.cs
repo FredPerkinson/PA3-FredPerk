@@ -1,3 +1,7 @@
+using System;
+using PA3_FredPerk.Database;
+using PA3_FredPerk.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
