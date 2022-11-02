@@ -1,9 +1,19 @@
 using System;
-using PA3_FredPerk.Database;
-using PA3_FredPerk.Models;
+using API.Database;
+using API.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{ 
+    options.AddPolicy("OpenPolicy",
+    builder =>
+    {
+        builder.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});
 
 /////////////////////////basic web project
 ///////deploy api
@@ -27,6 +37,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseCors("OpenPolicy");
 
 app.MapControllers();
 

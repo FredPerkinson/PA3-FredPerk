@@ -17,7 +17,31 @@ namespace API.Database
             string cs = connectionString.cs;
             using var con = new MySqlConnection(cs);
             con.Open();
-            return driver;
+
+            string stm = @"SELECT id, 
+                            firstName, 
+                            rating, 
+                            dateHired, 
+                            deleted
+                            FROM drivers WHERE id = @id";
+            using var cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            cmd.Prepare();
+
+            using MySqlDataReader reader = cmd.ExecuteReader();
+
+            //List<Driver> drivers = new List<Driver>();
+
+            Driver myDriver = new Driver();
+            myDriver.id = reader.GetInt32("id");
+            myDriver.firstName = reader.GetString("firstName");
+            myDriver.rating = reader.GetDouble("rating");
+            myDriver.dateHired = reader.GetDateTime("dateHired");
+            myDriver.deleted = reader.GetBoolean("deleted");
+            //drivers.Add(myDriver);
+
+            return myDriver;
         }
 
         // public List<drivers> ViewDrivers(){
@@ -33,7 +57,7 @@ namespace API.Database
 
         //     while(reader.Rea)
         // }
-        public void readDriver(Driver myDriver)
+        public List<Driver> readDriver()
         {
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
@@ -49,7 +73,6 @@ namespace API.Database
                             // VALUES(@id, @firstName, @rating, @dateHired, @deleted)";
 /////////////my SQL select statments w3 schools
             using var cmd = new MySqlCommand(stm, con);
-
             // cmd.Parameters.AddWithValue("@id", myDriver.id);
             // cmd.Parameters.AddWithValue("@firstName", myDriver.firstName);
             // cmd.Parameters.AddWithValue("@rating", myDriver.rating);
@@ -58,17 +81,17 @@ namespace API.Database
 
             cmd.Prepare();
 
-            MySqlDataReader  reader = cmd.ExecuteReader();
+            using MySqlDataReader reader = cmd.ExecuteReader();
 
             List<Driver> drivers = new List<Driver>();
 
            while (reader.Read()) {
             Driver myDriver = new Driver();
-            myDriver.id = reader.GetString("id");
+            myDriver.id = reader.GetInt32("id");
             myDriver.firstName = reader.GetString("firstName");
-            myDriver.rating = reader.GetString("rating");
-            myDriver.rating = reader.GetString("rating");
-            myDriver.deleted = reader.GetString("deleted");
+            myDriver.rating = reader.GetDouble("rating");
+            myDriver.dateHired = reader.GetDateTime("dateHired");
+            myDriver.deleted = reader.GetBoolean("deleted");
             drivers.Add(myDriver);
            }
 

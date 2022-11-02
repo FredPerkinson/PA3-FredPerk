@@ -22,17 +22,17 @@ namespace API.Database
 
             using var cmd = new MySqlCommand(stm, con);
 
-            cmd.Parameters.AddWithValue("@id", myDriver.id);
-            cmd.Parameters.AddWithValue("@firstName", myDriver.firstName);
-            cmd.Parameters.AddWithValue("@rating", myDriver.rating);
-            cmd.Parameters.AddWithValue("@dateHired", myDriver.dateHired);
-            cmd.Parameters.AddWithValue("@deleted", myDriver.deleted);
+            cmd.Parameters.AddWithValue("@id", drivers.id);
+            cmd.Parameters.AddWithValue("@firstName", drivers.firstName);
+            cmd.Parameters.AddWithValue("@rating", drivers.rating);
+            cmd.Parameters.AddWithValue("@dateHired", drivers.dateHired);
+            cmd.Parameters.AddWithValue("@deleted", drivers.deleted);
 
             cmd.Prepare();
 
-            string temp = @"SELECT * FROM drivers ORDER BY dateHired DESC";
-            using var temp = new MySqlCommand(temp, con);
-            cmd.ExecuteNonQuery();
+            // string stm2 = @"SELECT * FROM drivers ORDER BY dateHired DESC";
+            // cmd = MySqlCommand(stm2, cmd);
+            // cmd.ExecuteNonQuery();
         }
     }
 }

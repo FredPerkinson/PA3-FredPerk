@@ -20,7 +20,7 @@
         <form onsubmit="return false;" method=" post">
         <label class = "form-label" for = "firstName"> Add a Driver:</label><br>
         <input class = "form-control" type = "text" id = "firstName" name = "firstName"><br>
-        <button class = btn onclick = "addDriver()"> Add Driver</button>
+        <button class = "btn" onclick = "addDriver()"> Add Driver</button>
         </form>
     </div>
 
@@ -37,6 +37,14 @@
             <label class = "form-label" for = "deleteDriver">Delete a Driver:</label><br>
             <input class = "form-control" type = "text" id = "deleteDriver" name = "deleteDriver"><br>
             <button class = "btn" onclick = "deleteDriver()">Delete a Driver</button>
+        </form>
+    </div>
+
+    <div id = "read" class = "container">
+        <form onsubmit="return false">
+            <label class = "form-label" for = "readDriver">Select a Driver:</label><br>
+            <input class = "form-control" type = "text" id = "readDriver" name = "readDriver"><br>
+            <button class = "btn" onclick = "readDriver()">Select a Driver</button>
         </form>
     </div>
 

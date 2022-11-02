@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using api.Models;
-using api.Database;
+using API.Models;
+using API.Database;
 
-namespace api.Controllers
+namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -15,7 +15,7 @@ namespace api.Controllers
     {
         // GET: api/Driver
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Driver> Get()
         {
             ReadDriver readObject = new ReadDriver();/////////////////
             return readObject.readDriver(); /////////////////////////
@@ -23,9 +23,10 @@ namespace api.Controllers
 
         // GET: api/Driver/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
+        public Driver Get(int id)
+        { 
+            ReadDriver readObject = new ReadDriver();
+            return readObject.ViewDriver(id);
         }
 
         // POST: api/Driver
@@ -33,14 +34,15 @@ namespace api.Controllers
         public void Post([FromBody]Driver driver)
         {
             CreateDriver myDriver = new CreateDriver();
-            myDriver.Create(driver);
+            myDriver.createDriver(driver);
         }
 
         // PUT: api/Driver/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
-
+            EditDriver myDriver = new EditDriver();
+            myDriver.UpdateDriver(myDriver);
         }
 
         // DELETE: api/Driver/5
@@ -48,7 +50,7 @@ namespace api.Controllers
         public void Delete(int id)
         {
             DeleteDriver myDriver = new DeleteDriver();
-            myDriver.Delete(id);
+            myDriver.DeleteMyDriver(id);
         }
     }
 }

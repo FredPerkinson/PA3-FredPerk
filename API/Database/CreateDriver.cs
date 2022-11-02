@@ -32,10 +32,10 @@ namespace API.Database
             string stm = @"INSERT INTO drivers(firstName, rating, dateHired, deleted) VALUES(@firstName, @rating, @dateHired, @deleted)";
             using var cmd = new MySqlCommand(stm, con);
 
-            cmd.Parameters.AddWithValue("@firstName", drivers.firstName);
-            cmd.Parameters.AddWithValue("@rating", drivers.rating);
-            cmd.Parameters.AddWithValue("@dateHired", drivers.dateHired);
-            cmd.Parameters.AddWithValue("@deleted", drivers.deleted);
+            cmd.Parameters.AddWithValue("@firstName", myDriver.firstName);
+            cmd.Parameters.AddWithValue("@rating", myDriver.rating);
+            cmd.Parameters.AddWithValue("@dateHired", myDriver.dateHired);
+            cmd.Parameters.AddWithValue("@deleted", myDriver.deleted);
 
             cmd.Prepare();
             cmd.ExecuteNonQuery();

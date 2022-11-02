@@ -2,24 +2,86 @@
 //need table to add date element probably not working because need to add more than one thing to type in insetad of just name
 
 //need to figure out how to call the api
-//need to fix using statements for MySql
 //how to add rating and name do i need multiple buttons?
 
 
+function addDriver(){
+    const addDriverApiUrl = "https://localhost:7097/API/Driver";
+    const newDriver = {
+        firstName : document.getElementById("firstName").value,
+        rating : 0,
+
+    }
+    fetch(addDriverApiUrl, {
+        method: "POST",
+        headers: {
+            "Accept": 'application/json',
+            "Content-Type": 'application/json'
+        },
+        body: JSON.stringify(newDriver),
+    })
+    .then((response)=> {
+        console.log(response);
+    })
+}
+
+function editDriver(){
+    const firstName = document.getElementById("editDriver").value
+    const editDriverApiUrl = "https://localhost:7097/API/Driver" + firstName;
+    fetch(editDriverApiUrl, {
+        method: "DELETE",
+        headers: {
+            "Accept": 'application/json',
+            "Content-Type": 'application/json'
+        },
+    })
+    .then((response)=>{
+        console.log(response);
+    })
+}
+
+function readDriver(){
+    const firstName = document.getElementById("readDriver").value
+    const readDriverApiUrl = "https://localhost:7097/API/Driver" + firstName;
+    fetch(readDriverApiUrl, {
+        method: "GET",
+        headers: {
+            "Accept": 'application/json',
+            "Content-Type": 'application/json'
+        },
+    })
+    .then((response)=>{
+        console.log(response);
+    })
+}
+
+function deleteDriver(){
+    const firstName = document.getElementById("deleteDriver").value
+    const deleteDriverApiUrl = "https://localhost:7097/API/Driver" + firstName;
+    fetch(deleteDriverApiUrl, {
+        method: "DELETE",
+        headers: {
+            "Accept": 'application/json',
+            "Content-Type": 'application/json'
+        },
+    })
+    .then((response)=>{
+        console.log(response);
+    })
+}
 
 let app = document.getElementById("app")
 let taskcount = 0  
 let drivers = JSON.parse(localStorage.getItem('drivers')) ? JSON.parse(localStorage.getItem('drivers')) : []
 
 function handleOnLoad(){
-    createTable()
-    createFrom()
+    //createFrom()
     createDriverTable()
 }
 
 function createDriverTable(){
 
-    const url = 'https://dashboard.heroku.com/apps/pa3-fredp'   ////////////heroku database url???
+    const url = 'https://localhost:7097/API/Driver'   ////////////heroku database url???
     fetch(url).then(function(response){
         console.log(response)
         return response.json()
@@ -99,16 +161,16 @@ function displayDriverTable(driverData){
 }
 
 function createFrom(){
-    let form = document.createElement('form')
-    let textInput = document.createElement('input')
-    textInput.type = 'text'
-    textInput.placeholder = 'Please enter a Driver'
-    textInput.id = 'newDriver'
-    form.appendChild(textInput) 
+    // let form = document.createElement('form')
+    // let textInput = document.createElement('input')
+    // textInput.type = 'text'
+    // textInput.placeholder = 'Please'
+    // textInput.id = 'newDriver'
+    // form.appendChild(textInput) 
 
-    let sumbitButton = document.createElement('button')
-    sumbitButton.textContent = 'Submit'
-    form.appendChild(sumbitButton)
+    // let sumbitButton = document.createElement('button')
+    // sumbitButton.textContent = 'Submit'
+    // form.appendChild(sumbitButton)
 
     form.addEventListener('submit', function(e){
         e.preventDefault()

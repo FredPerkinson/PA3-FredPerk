@@ -16,5 +16,10 @@ namespace API.Models
         public DateTime dateHired  { get; set; }
 
         public Boolean deleted {get; set;}
+
+        public Driver()
+        {
+            dateHired = DateTime.Now;
+        }
     }
 }
