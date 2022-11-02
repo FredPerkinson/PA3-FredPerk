@@ -4,13 +4,11 @@
 //need to figure out how to call the api
 //how to add rating and name do i need multiple buttons?
 
-
 function addDriver(){
     const addDriverApiUrl = "https://localhost:7097/API/Driver";
     const newDriver = {
         firstName : document.getElementById("firstName").value,
         rating : 0,
-
     }
     fetch(addDriverApiUrl, {
         method: "POST",
@@ -26,17 +24,23 @@ function addDriver(){
 }
 
 function editDriver(){
-    const firstName = document.getElementById("editDriver").value
+    const id = document.getElementById("editDriver").value
     const editDriverApiUrl = "https://localhost:7097/API/Driver" + firstName;
+    const rating = document.getElementById("editRating").value
+    const updatedDriver = {
+        id : parseInt(id),
+        rating: parseDouble(rating)
+    }
     fetch(editDriverApiUrl, {
-        method: "DELETE",
+        method: "PUT",
         headers: {
             "Accept": 'application/json',
             "Content-Type": 'application/json'
         },
+        body: JSON.stringify(updatedDriver)
     })
     .then((response)=>{
-        console.log(response);
+        readDriver();
     })
 }
 
@@ -49,6 +53,7 @@ function readDriver(){
             "Accept": 'application/json',
             "Content-Type": 'application/json'
         },
+        body: JSON.stringify(updatedDriver)
     })
     .then((response)=>{
         console.log(response);

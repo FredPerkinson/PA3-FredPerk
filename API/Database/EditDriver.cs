@@ -29,6 +29,7 @@ namespace API.Database
             cmd.Parameters.AddWithValue("@deleted", drivers.deleted);
 
             cmd.Prepare();
+            cmd.ExecuteNonQuery();
 
             // string stm2 = @"SELECT * FROM drivers ORDER BY dateHired DESC";
             // cmd = MySqlCommand(stm2, cmd);

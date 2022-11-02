@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "./CSS/index.CSS">
-    <title>Capstone Taxi Service</title>
+    <title> Capstone Taxi Service</title>
 </head>
+<body style="background-color:#DC143C;">
 <h1>Capstone Taxi Service</h1>  
 <body onload = handleOnLoad()>
     <div id = "app"></div>
@@ -25,10 +26,12 @@
     </div>
 
     <div id="edit" class = "container">
-        <form onsubmit="return flase;">
-            <label class = "form-label" for = "editDriver">Edit Driver here:</label><br>
-            <input class = "form-control" type = "text" id = "editDriver" name = "editDriver"><br>
-            <button class = "btn" onclick= "editDriver()">Edit Driver</button>
+        <form onsubmit="return false;" method="post">
+            <label class = "form-label" for = "editDriver">Edit Driver ID:</label><br>
+            <input type = "text" id = "editDriver" name = "editDriver"><br>
+            <label class = "form-label" for = "editDriver">Add new rating:</label><br>
+            <input type = "text" id = "editRating" name = "Add Rating"><br>
+            <input type = "submit" value = "submit" onclick= "editDriver()">
         </form>
     </div>
 

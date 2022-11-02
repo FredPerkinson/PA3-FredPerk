@@ -39,10 +39,10 @@ namespace API.Controllers
 
         // PUT: api/Driver/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Driver value)
         {
             EditDriver myDriver = new EditDriver();
-            myDriver.UpdateDriver(myDriver);
+            myDriver.UpdateDriver(value);
         }
 
         // DELETE: api/Driver/5
