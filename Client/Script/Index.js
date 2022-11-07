@@ -1,8 +1,3 @@
-//watched tables and forms and local storage and API Calls and MySql    
-//need table to add date element probably not working because need to add more than one thing to type in insetad of just name
-
-//need to figure out how to call the api
-//how to add rating and name do i need multiple buttons?
 
 function addDriver(){
     const addDriverApiUrl = "https://localhost:7097/API/Driver";
@@ -80,7 +75,7 @@ let taskcount = 0
 let drivers = JSON.parse(localStorage.getItem('drivers')) ? JSON.parse(localStorage.getItem('drivers')) : []
 
 function handleOnLoad(){
-    //createFrom()
+    createFrom()
     createDriverTable()
 }
 

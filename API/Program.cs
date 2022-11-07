@@ -1,6 +1,7 @@
 using System;
 using API.Database;
 using API.Models;
+using Microsoft.AspNetCore.Cors;
 
 var builder = WebApplication.CreateBuilder(args);
 
